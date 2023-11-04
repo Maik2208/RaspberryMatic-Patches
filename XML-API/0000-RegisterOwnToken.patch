@@ -1,5 +1,5 @@
---- ./usr/local/etc/config/addons/www/xmlapi/index.cgi.orig
-+++ ./usr/local/etc/config/addons/www/xmlapi/index.cgi
+--- /usr/local/etc/config/addons/www/xmlapi/index.cgi.orig
++++ /usr/local/etc/config/addons/www/xmlapi/index.cgi
 @@ -127,6 +127,7 @@
      </td></tr>
      <tr><td><a href=./tokenregister.cgi?sid=$sid>tokenregister.cgi</a></td><td><b>Registers a new security access token</b><br/>
@@ -8,8 +8,8 @@
        <i>desc=string</i> - description for new token id<br/>
      </td></tr>
      <tr><td><a href=./tokenrevoke.cgi?sid=$sid>tokenrevoke.cgi</a></td><td><b>Revokes an existing security access token</b><br/>
---- ./usr/local/etc/config/addons/www/xmlapi/session.tcl.orig
-+++ ./usr/local/etc/config/addons/www/xmlapi/session.tcl
+--- /usr/local/etc/config/addons/www/xmlapi/session.tcl.orig
++++ /usr/local/etc/config/addons/www/xmlapi/session.tcl
 @@ -53,6 +53,19 @@
    return $newToken
  }
@@ -30,8 +30,8 @@
  proc revoke_token tid {
    # get tokens
    array set tokens [get_tokens]
---- ./usr/local/etc/config/addons/www/xmlapi/tokenregister.cgi.orig
-+++ ./usr/local/etc/config/addons/www/xmlapi/tokenregister.cgi
+--- /usr/local/etc/config/addons/www/xmlapi/tokenregister.cgi.orig
++++ /usr/local/etc/config/addons/www/xmlapi/tokenregister.cgi
 @@ -7,20 +7,30 @@
  
  if {[info exists sid] && [check_session $sid]} {
