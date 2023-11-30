@@ -2,12 +2,12 @@
 +++ /usr/local/etc/config/addons/www/xmlapi/index.cgi
 @@ -127,6 +127,7 @@
      </td></tr>
-     <tr><td><a href=/tokenregister.cgi?sid=$sid>tokenregister.cgi</a></td><td><b>Registers a new security access token</b><br/>
+     <tr><td><a href=./tokenregister.cgi?sid=$sid>tokenregister.cgi</a></td><td><b>Registers a new security access token</b><br/>
        <i>sid=string</i> - security access token id<br/>
 +      <i>token=string</i> - token to register (optional)<br/>
        <i>desc=string</i> - description for new token id<br/>
      </td></tr>
-     <tr><td><a href=/tokenrevoke.cgi?sid=$sid>tokenrevoke.cgi</a></td><td><b>Revokes an existing security access token</b><br/>
+     <tr><td><a href=./tokenrevoke.cgi?sid=$sid>tokenrevoke.cgi</a></td><td><b>Revokes an existing security access token</b><br/>
 --- /usr/local/etc/config/addons/www/xmlapi/session.tcl.orig
 +++ /usr/local/etc/config/addons/www/xmlapi/session.tcl
 @@ -53,6 +53,19 @@
@@ -47,7 +47,6 @@
 +        set token $val
 +        continue
 +      }
-+
        if {0 != [regexp "^desc=(.*)$" $pair dummy val]} {
          set desc $val
  
