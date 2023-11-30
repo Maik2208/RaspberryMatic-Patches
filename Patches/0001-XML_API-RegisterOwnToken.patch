@@ -47,6 +47,7 @@
 +        set token $val
 +        continue
 +      }
++
        if {0 != [regexp "^desc=(.*)$" $pair dummy val]} {
          set desc $val
  
