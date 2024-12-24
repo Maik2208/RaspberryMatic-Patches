@@ -1,5 +1,5 @@
---- ./www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/KEY_TRANSCEIVER.tcl.orig
-+++ ./www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/KEY_TRANSCEIVER.tcl
+--- /www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/KEY_TRANSCEIVER.tcl.orig
++++ /www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/KEY_TRANSCEIVER.tcl
 @@ -103,7 +103,7 @@
  set PROFILE_1(SHORT_ON_TIME_FACTOR) {31 range 0 - 31}
  set PROFILE_1(SHORT_ON_TIME_MODE) 0
@@ -9,8 +9,8 @@
  set PROFILE_1(SHORT_OPTICAL_SIGNAL_BEHAVIOUR) {1 range 0 - 12}
  set PROFILE_1(SHORT_PROFILE_REPETITIONS) {0 range 0 - 255}
  set PROFILE_1(SHORT_PROFILE_ACTION_TYPE) 1
---- ./www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/getColorElement.tcl.orig
-+++ ./www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/getColorElement.tcl
+--- /www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/getColorElement.tcl.orig
++++ /www/config/easymodes/DIMMER_VIRTUAL_RECEIVER/getColorElement.tcl
 @@ -15,6 +15,8 @@
    set options(5) "\${PURPLE}"
    set options(6) "\${YELLOW}"
@@ -20,8 +20,8 @@
    append html [get_ComboBox options $param separate_${special_input_id}_$prn\_$pref PROFILE $param]
    append html "</td></tr>"
    return $html
---- ./www/config/easymodes/js/HmIPWeeklyProgram.js.orig
-+++ ./www/config/easymodes/js/HmIPWeeklyProgram.js
+--- /www/config/easymodes/js/HmIPWeeklyProgram.js.orig
++++ /www/config/easymodes/js/HmIPWeeklyProgram.js
 @@ -1843,9 +1843,11 @@
        if ((this.chnType == this.DIMMER) || (this.chnType == this.UNIVERSAL_LIGHT_RECEIVER) || (this.chnType == this.SERVO)) {
          if (((this.chnType == this.DIMMER) || (this.chnType == this.UNIVERSAL_LIGHT_RECEIVER) ) && (! this.WINDOW_DRIVE_RECEIVER) ) {
@@ -45,8 +45,8 @@
      jQuery.each(this.arColorA, function (index, color) {
        result += (val == index) ? "<option  value='" + index + "'  selected='selected'>" + color + "</option>" : "<option  value='" + index + "'>" + color + "</option>";
      });
---- ./www/rega/pages/msg/setDimmerVirtualReceiverCombinedParam.htm.orig
-+++ ./www/rega/pages/msg/setDimmerVirtualReceiverCombinedParam.htm
+--- /www/rega/pages/msg/setDimmerVirtualReceiverCombinedParam.htm.orig
++++ /www/rega/pages/msg/setDimmerVirtualReceiverCombinedParam.htm
 @@ -5,6 +5,7 @@
        <td>${lblColorNr}: </td>
        <td>
@@ -89,8 +89,8 @@
            <option value="100">100%</option>
            <option value="100.5">${optionLastValue}</option>
            <option value="101">${lblIgnore}</option>
---- ./www/rega/pages/msg/setRGBWCombinedParam.htm.orig
-+++ ./www/rega/pages/msg/setRGBWCombinedParam.htm
+--- /www/rega/pages/msg/setRGBWCombinedParam.htm.orig
++++ /www/rega/pages/msg/setRGBWCombinedParam.htm
 @@ -30,6 +30,7 @@
        <td>
          <select id="combinedParam_Level">
@@ -99,8 +99,8 @@
            <option value="10">10%</option>
            <option value="20">20%</option>
            <option value="30">30%</option>
---- ./www/rega/pages/msg/setRGBWTunableWhiteCombinedParam.htm.orig
-+++ ./www/rega/pages/msg/setRGBWTunableWhiteCombinedParam.htm
+--- /www/rega/pages/msg/setRGBWTunableWhiteCombinedParam.htm.orig
++++ /www/rega/pages/msg/setRGBWTunableWhiteCombinedParam.htm
 @@ -7,6 +7,7 @@
        <td>
          <select id="combinedParam_Level">
