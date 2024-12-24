@@ -21,7 +21,7 @@
     <tr>
       <td id="lblBrightnessLevel">${lblBrightnessLevel}: </td>
       <td>
-        <select id="combinedParam_Level">
+        <select id="combinedParam_Level" >
           <option value="0">${lblOff}</option>
           <option value="1">1%</option>
           <option value="2">2%</option>
@@ -53,10 +53,18 @@
           <option value="100">100%</option>
           <option value="100.5">${optionLastValue}</option>
           <option value="101">${lblIgnore}</option>
+          <option value="99999998">${stringTableEnterValue}</option>
         </select>
       </td>
     </tr>
 
+    <tr><td></td>
+      <td>
+        <div id="divLevelEnterFreeValue" class="hidden">
+          <input id="prgDimmerEnterFreeLevel" type="text" value="0" size="2" style="text-align: center">&nbsp;%
+        </div>
+      </td>
+    </tr>
     <tr id="trSelectBehaviour" class="visibilityHidden">
       <td>${lblBehaviour}</td>
       <td colspan="3">

@@ -57,7 +57,7 @@
            <option value="2">${optionColorGREEN}</option>
 @@ -22,15 +23,33 @@
        <td>
-         <select id="combinedParam_Level">
+         <select id="combinedParam_Level" >
            <option value="0">${lblOff}</option>
 +          <option value="1">1%</option>
 +          <option value="2">2%</option>
